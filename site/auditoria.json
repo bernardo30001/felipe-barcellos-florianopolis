@@ -1,0 +1,217 @@
+{
+  "passed": true,
+  "candidateVotes": 3587,
+  "officialCandidateVotes": 3587,
+  "allCandidatesReconciled": 224,
+  "allPartiesReconciled": 24,
+  "registrationKey": "municipality + zone + section",
+  "unmatchedSections": 0,
+  "sha256VerifiedBallots": 1207,
+  "expectedTotals": {
+    "votes": 3587,
+    "validVotes": 309509,
+    "nominalValidVotes": 299869,
+    "partyVotes": 9640,
+    "blankVotes": 14154,
+    "nullVotes": 9531,
+    "technicalNullVotes": 48,
+    "subJudiceVotes": 203,
+    "turnout": 333397,
+    "electorate": 419575,
+    "sections": 1207
+  },
+  "actualTotals": {
+    "votes": 3587,
+    "validVotes": 309509,
+    "nominalValidVotes": 299869,
+    "partyVotes": 9640,
+    "blankVotes": 14154,
+    "nullVotes": 9531,
+    "technicalNullVotes": 48,
+    "subJudiceVotes": 203,
+    "otherInvalidVotes": 0,
+    "turnout": 333397,
+    "electorate": 419575,
+    "sections": 1207,
+    "sectionsWithCandidateVotes": 1093
+  },
+  "relocatedSections": [
+    {
+      "zone": 12,
+      "section": 544,
+      "oldLocation": 2127,
+      "currentLocation": 2356,
+      "neighborhood": "COLONINHA"
+    },
+    {
+      "zone": 12,
+      "section": 545,
+      "oldLocation": 2127,
+      "currentLocation": 2356,
+      "neighborhood": "COLONINHA"
+    },
+    {
+      "zone": 12,
+      "section": 546,
+      "oldLocation": 2127,
+      "currentLocation": 2356,
+      "neighborhood": "COLONINHA"
+    },
+    {
+      "zone": 12,
+      "section": 547,
+      "oldLocation": 2127,
+      "currentLocation": 2356,
+      "neighborhood": "COLONINHA"
+    },
+    {
+      "zone": 12,
+      "section": 598,
+      "oldLocation": 2178,
+      "currentLocation": 2500,
+      "neighborhood": "CAPOEIRAS"
+    },
+    {
+      "zone": 12,
+      "section": 599,
+      "oldLocation": 2178,
+      "currentLocation": 2500,
+      "neighborhood": "CAPOEIRAS"
+    },
+    {
+      "zone": 12,
+      "section": 600,
+      "oldLocation": 2178,
+      "currentLocation": 2500,
+      "neighborhood": "CAPOEIRAS"
+    },
+    {
+      "zone": 12,
+      "section": 601,
+      "oldLocation": 2178,
+      "currentLocation": 2500,
+      "neighborhood": "CAPOEIRAS"
+    },
+    {
+      "zone": 12,
+      "section": 602,
+      "oldLocation": 2178,
+      "currentLocation": 2500,
+      "neighborhood": "CAPOEIRAS"
+    },
+    {
+      "zone": 12,
+      "section": 603,
+      "oldLocation": 2178,
+      "currentLocation": 2500,
+      "neighborhood": "CAPOEIRAS"
+    },
+    {
+      "zone": 12,
+      "section": 604,
+      "oldLocation": 2178,
+      "currentLocation": 2500,
+      "neighborhood": "CAPOEIRAS"
+    },
+    {
+      "zone": 12,
+      "section": 605,
+      "oldLocation": 2178,
+      "currentLocation": 2500,
+      "neighborhood": "CAPOEIRAS"
+    },
+    {
+      "zone": 12,
+      "section": 632,
+      "oldLocation": 2224,
+      "currentLocation": 2453,
+      "neighborhood": "CAPOEIRAS"
+    },
+    {
+      "zone": 12,
+      "section": 633,
+      "oldLocation": 2224,
+      "currentLocation": 2453,
+      "neighborhood": "CAPOEIRAS"
+    },
+    {
+      "zone": 12,
+      "section": 634,
+      "oldLocation": 2224,
+      "currentLocation": 2453,
+      "neighborhood": "CAPOEIRAS"
+    },
+    {
+      "zone": 12,
+      "section": 635,
+      "oldLocation": 2224,
+      "currentLocation": 2453,
+      "neighborhood": "CAPOEIRAS"
+    },
+    {
+      "zone": 12,
+      "section": 671,
+      "oldLocation": 2470,
+      "currentLocation": 2135,
+      "neighborhood": "MONTE CRISTO"
+    },
+    {
+      "zone": 100,
+      "section": 83,
+      "oldLocation": 1252,
+      "currentLocation": 1538,
+      "neighborhood": "VARGEM PEQUENA"
+    },
+    {
+      "zone": 100,
+      "section": 149,
+      "oldLocation": 1252,
+      "currentLocation": 1538,
+      "neighborhood": "VARGEM PEQUENA"
+    },
+    {
+      "zone": 100,
+      "section": 507,
+      "oldLocation": 1902,
+      "currentLocation": 1872,
+      "neighborhood": "SACO GRANDE"
+    }
+  ],
+  "aggregatedSections": [
+    {
+      "zone": 13,
+      "principal": 611,
+      "aggregated": [
+        626
+      ]
+    },
+    {
+      "zone": 100,
+      "principal": 404,
+      "aggregated": [
+        531
+      ]
+    },
+    {
+      "zone": 13,
+      "principal": 616,
+      "aggregated": [
+        624
+      ]
+    },
+    {
+      "zone": 100,
+      "principal": 464,
+      "aggregated": [
+        532
+      ]
+    }
+  ],
+  "zeroVoteNeighborhoods": [
+    "MORRO DA CAIXA",
+    "RETIRO DA LAGOA",
+    "CAIEIRA DA BARRA DO SUL",
+    "COSTA DA LAGOA",
+    "SERRINHA"
+  ]
+}

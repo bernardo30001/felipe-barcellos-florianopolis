@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102d45">
+  <meta name="description" content="Votação de Felipe Barcellos para deputado federal em 2026, por bairro e local de votação em Florianópolis. Resultados oficiais da Justiça Eleitoral.">
+  <title>Felipe Barcellos · Votos por bairro em Florianópolis</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23102d45'/%3E%3Cpath d='M8 23V16M16 23V9M24 23V13' stroke='%2368e0d1' stroke-width='4'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#ranking">Ir para os bairros</a>
+  <header class="masthead">
+    <div class="container masthead-inner">
+      <a class="brand" href="#"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>VOTO <strong>EM FOCO</strong></span></a>
+      <span class="place">Florianópolis <span>/ SC</span></span>
+      <a class="method-link" href="#metodologia">Fontes e metodologia</a>
+    </div>
+  </header>
+  <main class="container">
+    <section class="intro" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">ELEIÇÕES 2026 <span>·</span> DEPUTADO FEDERAL <span>·</span> 1º TURNO</p>
+        <h1 id="page-title">Felipe Barcellos</h1>
+        <p class="subtitle">A votação, bairro a bairro, em Florianópolis.</p>
+      </div>
+      <div class="candidate-label"><span class="candidate-number">1414</span><span>MISSÃO <span aria-hidden="true">/</span> SANTA CATARINA</span></div>
+    </section>
+
+    <div id="load-error" class="error" hidden>Não foi possível carregar os dados. Recarregue a página para tentar novamente.</div>
+    <noscript><p class="error">Ative o JavaScript para explorar o ranking. Os <a href="bairros.csv">dados por bairro também estão disponíveis em CSV</a>.</p></noscript>
+
+    <section class="summary" aria-label="Resumo da votação">
+      <div class="stat stat-primary"><span class="stat-label">VOTOS EM FLORIANÓPOLIS</span><strong id="city-votes">—</strong><span id="city-share">Conferindo dados oficiais</span></div>
+      <div class="stat"><span class="stat-label">BAIRROS / LOCALIDADES</span><strong id="neighborhood-count">—</strong><span>com locais de votação</span></div>
+      <div class="stat"><span class="stat-label">LOCAIS DE VOTAÇÃO</span><strong id="location-count">—</strong><span id="section-count">— seções apuradas</span></div>
+      <div class="stat"><span class="stat-label">MAIOR VOTAÇÃO</span><strong class="stat-neighborhood" id="top-neighborhood">—</strong><span id="top-votes">— votos no bairro</span></div>
+    </section>
+
+    <p class="definition"><span aria-hidden="true">ⓘ</span> O bairro é o do <strong>local de votação</strong> no cadastro eleitoral. Não indica necessariamente onde o eleitor mora.</p>
+
+    <div class="workspace">
+      <section class="ranking-panel" id="ranking" aria-labelledby="ranking-title">
+        <div class="section-heading"><div><p class="eyebrow">DISTRIBUIÇÃO TERRITORIAL</p><h2 id="ranking-title">Votos por bairro</h2></div><a href="bairros.csv" download class="download">Baixar CSV</a></div>
+        <div class="ranking-tools">
+          <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="search" type="search" placeholder="Buscar bairro…" aria-label="Buscar bairro" autocomplete="off"></label>
+          <label class="sort"><span class="sr-only">Ordenar bairros</span><select id="sort" aria-label="Ordenar bairros"><option value="votes">Mais votos</option><option value="name">A a Z</option></select></label>
+        </div>
+        <p class="table-context" id="result-count" aria-live="polite">Carregando bairros…</p>
+        <div class="table-wrap"><table><thead><tr><th scope="col" class="rank-col">#</th><th scope="col">Bairro / localidade</th><th scope="col" class="numeric">Votos</th><th scope="col" class="numeric share-col"><abbr title="Parcela dos votos de Felipe em Florianópolis que veio deste bairro">% do total*</abbr></th></tr></thead><tbody id="neighborhood-rows"></tbody></table></div>
+        <div class="empty" id="empty" hidden>Nenhum bairro encontrado. Tente outro nome.</div>
+        <p class="table-note">* Parcela dos votos de Felipe em Florianópolis. As barras comparam o número de votos com o bairro mais votado.</p>
+      </section>
+
+      <aside class="detail-panel" aria-labelledby="detail-title">
+        <div class="detail-sticky">
+          <p class="eyebrow">BAIRRO EM DETALHE</p>
+          <h2 id="detail-title" tabindex="-1">Selecione um bairro</h2>
+          <div class="detail-total"><strong id="detail-votes">—</strong><span>votos</span></div>
+          <div class="share-track" aria-hidden="true"><span id="detail-share-bar"></span></div>
+          <p class="detail-share" id="detail-share">Selecione um bairro no ranking.</p>
+          <div class="detail-meta"><span id="detail-locations">— locais</span><span id="detail-sections">— seções</span></div>
+          <div class="locations-heading"><h3>Locais de votação</h3><span>VOTOS</span></div>
+          <div id="locations"></div>
+          <p class="detail-note">Selecione um bairro na lista para consultar seus locais de votação.</p>
+        </div>
+      </aside>
+    </div>
+
+    <section class="methodology" id="metodologia" aria-labelledby="method-title">
+      <div><p class="eyebrow">DADOS ABERTOS · JUSTIÇA ELEITORAL</p><h2 id="method-title">Como os números foram reunidos</h2><p id="snapshot-date">Consulta em 6 de outubro de 2026.</p><p>Consulta independente, sem vínculo com o candidato ou com a Justiça Eleitoral.</p></div>
+      <div class="method-body">
+        <p>Os votos das seções eleitorais de Florianópolis foram somados por local de votação e agrupados pelo bairro informado no cadastro do TSE. São os votos nominais de Felipe Barcellos, número 1414, para deputado federal no primeiro turno de 2026.</p>
+        <p id="coverage-note"></p>
+        <p id="relocation-note"></p>
+        <p>Os nomes representam bairros e localidades do cadastro eleitoral, que podem diferir dos limites oficiais da prefeitura. Seções agregadas são contabilizadas apenas uma vez. Os percentuais do ranking usam como base o total do candidato na cidade, e não todos os votos válidos do bairro.</p>
+        <p>Retrato dos dados na data indicada, sem atualização automática.</p>
+        <h3>Fontes e arquivos</h3><ul id="sources"></ul>
+        <a href="data.json" class="data-link">Base completa em JSON</a> · <a href="secoes.csv" class="data-link">Votos por seção</a> · <a href="auditoria.json" class="data-link">Conferência dos totais</a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container"><span>VOTO EM FOCO <span aria-hidden="true">/</span> FLORIANÓPOLIS</span><span>Dados públicos. Consulta aberta.</span></div></footer>
+</body>
+</html>
